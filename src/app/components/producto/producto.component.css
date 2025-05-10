@@ -1,0 +1,135 @@
+.titulo-centrado {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.5px;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 30px;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+.producto {
+    background-color: #ffffff;
+    padding: 25px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.producto img,
+.imagen-producto {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: opacity 0.3s ease;
+}
+
+.producto img:hover,
+.imagen-producto:hover {
+    opacity: 0.9;
+}
+
+.producto h3 {
+    font-size: 1.6rem;
+    margin: 10px 0;
+    color: #1a1a1a;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+}
+
+.producto p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.producto button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.producto button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.producto button:disabled {
+    background-color: #b3b3b3;
+    cursor: not-allowed;
+}
+
+.carrito-button {
+    display: block;
+    margin: 30px auto;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.carrito-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.cargando, .error {
+    text-align: center;
+    padding: 25px;
+    margin: 25px auto;
+    max-width: 450px;
+    border-radius: 12px;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.cargando {
+    background-color: #17a2b8;
+    border: 1px solid #138496;
+}
+
+.error {
+    background-color: #dc3545;
+    border: 1px solid #c82333;
+}
+
+@media (max-width: 600px) {
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    .producto {
+        width: 100%;
+    }
+}
